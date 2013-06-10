@@ -1,12 +1,12 @@
 * c:\w\HV\blocking815.asc
-L1 N001 VCC 1µH
-L2 VCC N002 1µH
+L1 nb VCC 1µH Rser=1
 L3 0 HV 1µH
-Q1 N002 N001 0 0 NPN
-V1 VCC 0 5v
+Q1 nk nb 0 0 BD139
+V1 VCC 0 PULSE(0 5 0.5s 0.1s)
+L2 nk VCC 1µH Rser=1
 .model NPN NPN
 .model PNP PNP
 .lib D:\LTspiceIV\lib\cmp\standard.bjt
-.tran 1s 1us
+.tran 1s
 .backanno
 .end
